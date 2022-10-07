@@ -1,0 +1,110 @@
+﻿@using Web.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Iniciar sesión";
+}
+
+
+<section id="hero">
+
+    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+
+
+        <h2>@ViewBag.Title.</h2>
+        <br/>
+
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+
+                @Html.AntiForgeryToken()
+                <h5 class="text-white mt-0 justify-content-center">  Use una cuenta local para iniciar sesión</h5>
+
+                <hr class="bg-light" /><br /><br />
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-11 control-label text-white" })
+                    <div class="col-md-12">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-11 control-label text-white" })
+                    <div class="col-md-12">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+
+
+
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-7 text-white">
+                        <div class="checkbox">
+
+                            @Html.CheckBoxFor(m => m.RememberMe)
+
+                            @Html.LabelFor(m => m.RememberMe)
+
+                            <br />
+                            <br />
+                           
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    <div class="col-md-12">
+
+                        <input type="submit" value="Iniciar sesión" class="btn btn-outline-light" />
+
+                        <br /><br /><br /><br />
+
+                        <a href="http://localhost:50989/Account/Register" class=" btn-outline-light btn-sm justify-content-center" role="button" aria-pressed="true">Registrarse como nuevo usuario</a>
+
+                    </div>
+
+                </div>
+
+
+
+
+                @*@Html.ActionLink("Registrar como nuevo usuario", "Register")*@
+
+                //Habilite esta opción después de habilitar la confirmación de la cuenta para la función de restablecimiento de contraseña
+                @*<p>
+                        @Html.ActionLink("¿Ha olvidado su contraseña?", "ForgotPassword")
+                    </p>*@
+
+                @*<button type="button" class="btn btn-warning">Warning</button>*@
+
+              }
+
+
+            </section>
+
+         </div>
+
+   
+
+
+</section>
+
+                    
+
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+
+        
+
+

@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title> Bootstrap - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+ 
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container-fluid d-flex align-items-center justify-content-center">
+
+            
+            <nav class="nav-menu d-none d-lg-block">
+
+
+                <ul>
+                    <li class="active"><a href="index">Home</a></li>
+
+                    <li> <a  href="#about">Descargas</a></li>
+                    
+                    <li><a href="#otros">Otros</a></li>
+                    
+
+                    <li class="drop-down">
+                        <a href="">Sistema operativo</a>
+                        <ul>
+                          
+                            <li><a href="#">Windows 7</a></li>
+                            <li><a href="#">Windows 10</a></li>
+                            <li><a href="#">Android</a></li>
+                          
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+
+                    <li></li>
+
+                    <li><a href="https://localhost:44354/Account/Register">Registrarse</a></li>
+                    <li><a href="https://localhost:44354/Account/Login">Iniciar Sesión</a></li>
+
+                </ul>
+
+
+            </nav>
+
+            @Html.Partial("_LoginPartial")
+          
+
+        </div>
+
+
+
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+
+        <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+
+            <center><div id="fechaHoy" class="text-uppercase text-white font-weight-bold"></div></center>
+            <p><p><p><p>
+                <h2>SOFTWARE DE MANTENIMIENTO</h2>
+                <a href="#about" class="get-started-btn scrollto">Remoto</a>
+                @*<h2>Herramientas IT / Desktop - Laptop </h2>*@
+            <p><p><p><p><p><p><p><p><p><p><p>
+                <center><div id="navegador" class="text-uppercase text-white font-weight-bold"> </div></center>
+
+                <script type="text/javascript">
+
+                    function navegador() {
+                        var agente = navigator.userAgent;
+                        var navegadores = ["OPR", "Chrome", "Firefox", "Safari", "Trident", "MSIE", "Edge"];
+                        for (var i in navegadores) {
+
+
+
+                            if (agente.indexOf(navegadores[i]) != -1) {
+
+                                return navegadores[i];
+
+                            }
+
+
+
+                        }
+
+                    }
+
+                    var browser = document.getElementById("navegador");
+                    window.onload = function () {
+                        browser.innerHTML = "Estas utilizando el navegador: " + navegador();
+
+                    }
+
+                </script>
+
+
+                <script>
+
+                    //FECHA ACTUAL
+
+                    var semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado'];
+                    var mes = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+                    var fech = new Date();
+                    var fecha = document.getElementById("fechaHoy");
+
+
+
+
+
+                    fecha.innerHTML = semana[fech.getDay()] + "," + " " + fech.getDate() + " " + "de " + mes[fech.getMonth()] + " " + "de " + fech.getFullYear();
+
+
+
+                </script>
+
+
+
+
+                <div class="d-flex">
+                   
+                </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+        </section><!-- End About Section -->
+        <!-- ======= About Boxes Section ======= -->
+        <section id="about-boxes" class="about-boxes">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    
+                    <p>Descargas</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card">
+                            <img src="~/Content/assets/img/Descargas1.png" class="card-img-top" alt="...">
+                            <div class="card-icon">
+                                <i class="ri-brush-4-line"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="">Programas Edición Gratuita</a></h5>
+                                <p class="card-text">Accede a programas de edición gratuita. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card">
+                            <img src="~/Content/assets/img/Navegadores1.jpg" class="card-img-top" alt="...">
+                            <div class="card-icon">
+                                <i class="ri-calendar-check-line"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="">Navegadores</a></h5>
+                                <p class="card-text">Accede a los navegadores mas utilizados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card">
+                            <img src="~/Content/assets/img/Admin1.png" class="card-img-top" alt="...">
+                            <div class="card-icon">
+                                <i class="ri-movie-2-line"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="">Administradores</a></h5>
+                                <p class="card-text">Sección para usuarios administradores. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Boxes Section -->
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Clients Section -->
+        
+        <!-- ======= Services Section ======= -->
+        <section id="otros" class="services section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    
+                    <p>Otros</p>
+                </div>
+
+                <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-6">
+                        <div class="icon-box">
+                            <i class="icofont-computer"></i>
+                            <h4><a href="#">Drivers</a></h4>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <i class="icofont-chart-bar-graph"></i>
+                            <h4><a href="#">Temperatura</a></h4>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <i class="icofont-image"></i>
+                            <h4><a href="#">Editores de imagen</a></h4>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <i class="icofont-settings"></i>
+                            <h4><a href="#">Mensajería</a></h4>
+                           
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+        
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up" ">
+
+                <div class=" section-title">
+                    
+                    <p>Contacto </p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                    
+                                </div>
+                            <div class="col-md-6">
+                                <div class="info-box mt-4">
+                                    <i class="bx bx-envelope"></i>
+                                    <h3>Email</h3>
+                                    <p>rodrigo_gnr@hotmail.es</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="form-row">
+                                <div class="col-md-5 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-md-5 form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensaje"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Enviar mensaje</button></div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+    
+    
+
+    <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+    <div id="preloader"></div>
+
+
+
+</body>
+
+</html>

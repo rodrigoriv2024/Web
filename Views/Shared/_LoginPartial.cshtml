@@ -1,0 +1,72 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="container-fluid d-flex align-items-center justify-content-center">
+
+            <ul class="nav-menu d-none d-lg-block">
+                <li class="nav-item">
+                    @Html.ActionLink("¡Hola   " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "nav-link js-scroll-trigger" })
+                </li>
+
+                &nbsp;
+                &nbsp;
+
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a></li>
+            </ul>
+
+        </div>
+
+
+
+
+
+
+    }
+}
+
+
+
+
+
+else
+
+{
+
+
+    
+
+        @*<div class="container-fluid d-flex align-items-center justify-content-center">
+
+            <ul class="nav-menu d-none d-lg-block">
+
+
+            
+
+
+                <li>
+                    <a href="https://localhost:44354/Account/Register">Registrarse</a>
+
+                </li>
+
+
+
+                <li>
+                    <a href="https://localhost:44354/Account/Login">Iniciar Sesión</a>
+
+                </li>
+
+                
+            </ul>
+
+        </div>*@
+
+    
+
+
+
+}
+
